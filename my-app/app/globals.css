@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-red: #8B2C2C;
+  --primary-red-light: #b32525;
+  --secondary-blue: #1e3a8a;
+  --accent-sky: #38bdf8;
 }
 
 @theme inline {
@@ -19,8 +23,173 @@
   }
 }
 
+/* Reset e base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animações personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Classes utilitárias */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Estilos para botões */
+.btn-primary {
+  @apply bg-red-500 text-white border-none px-5 py-3 rounded-full font-medium cursor-pointer transition-all duration-300 hover:bg-red-600 hover:shadow-lg hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-white text-white px-5 py-3 rounded-full font-medium cursor-pointer transition-all duration-300 hover:bg-white hover:bg-opacity-10 hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply border border-gray-300 px-4.5 py-2.5 rounded-md cursor-pointer transition-all duration-300 hover:bg-gray-50 hover:shadow-md;
+}
+
+/* Estilos para o header */
+.header-top {
+  @apply bg-gradient-to-r from-red-800 to-red-600 text-white px-5 py-2.5 flex justify-end items-center gap-5 text-sm;
+}
+
+.header-nav {
+  @apply bg-gradient-to-b from-gray-100 to-white px-3.75 py-3.75 flex justify-between items-center shadow-sm;
+}
+
+/* Estilos para o banner */
+.banner-section {
+  @apply h-[80vh] bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6')] flex items-center text-white relative overflow-hidden;
+}
+
+.banner-overlay {
+  @apply bg-black bg-opacity-60 p-10 w-full relative z-10;
+}
+
+.banner-badge {
+  @apply bg-blue-800 px-3 py-2 rounded-full text-sm font-medium;
+}
+
+.banner-title {
+  @apply text-5xl my-2.5 font-bold leading-tight;
+}
+
+.banner-subtitle {
+  @apply text-sky-400 text-xl font-medium mb-3;
+}
+
+.banner-description {
+  @apply max-w-[500px] text-lg leading-relaxed mb-5;
+}
+
+/* Estilos para os botões de categoria */
+.category-buttons {
+  @apply flex gap-2.5 p-5 flex-wrap justify-center md:justify-start;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-title {
+    @apply text-4xl;
+  }
+
+  .banner-description {
+    @apply text-base;
+  }
+
+  .header-top {
+    @apply px-3 py-2 text-xs gap-3;
+  }
+
+  .header-nav {
+    @apply px-3 py-3;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner-section {
+    @apply h-[70vh];
+  }
+
+  .banner-overlay {
+    @apply p-6;
+  }
+
+  .banner-badge {
+    @apply px-2 py-1 text-xs;
+  }
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Foco acessível */
+button:focus,
+a:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-300 hover:shadow-xl;
 }

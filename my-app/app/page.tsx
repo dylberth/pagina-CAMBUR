@@ -7,17 +7,17 @@ export default function Home() {
       <Header />
       <Banner />
 
-      <div className="flex gap-2.5 p-5 flex-wrap">
-        <button className="bg-red-500 text-white border-none px-4.5 py-2.5 rounded-md cursor-pointer hover:bg-red-600 transition-colors">
+      <div className="category-buttons animate-fade-in-up delay-500">
+        <button className="btn-primary hover-glow">
           Residencial
         </button>
-        <button className="px-4.5 py-2.5 rounded-md cursor-pointer border border-gray-300 hover:bg-gray-50 transition-colors">
+        <button className="btn-outline hover-lift">
           Estúdios
         </button>
-        <button className="px-4.5 py-2.5 rounded-md cursor-pointer border border-gray-300 hover:bg-gray-50 transition-colors">
+        <button className="btn-outline hover-lift">
           Apartamentos
         </button>
-        <button className="px-4.5 py-2.5 rounded-md cursor-pointer border border-gray-300 hover:bg-gray-50 transition-colors">
+        <button className="btn-outline hover-lift">
           Fachada
         </button>
       </div>

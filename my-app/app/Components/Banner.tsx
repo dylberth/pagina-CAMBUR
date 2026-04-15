@@ -1,37 +1,37 @@
 export default function Banner() {
   return (
-    <section className="h-[80vh] bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6')] flex items-center text-white">
-      <div className="bg-black bg-opacity-60 p-10 w-full">
+    <section className="banner-section">
+      <div className="banner-overlay animate-fade-in-up">
         {/* badges */}
-        <div className="mb-5">
-          <span className="bg-blue-800 px-3 py-2 rounded-full mr-2.5">
+        <div className="mb-5 animate-slide-in-left delay-200">
+          <span className="banner-badge mr-2.5 hover-lift">
             Jardim Guedala, São Paulo
           </span>
-          <span className="bg-blue-800 px-3 py-2 rounded-full">
+          <span className="banner-badge hover-lift">
             Estação Morumbi a 7 min
           </span>
         </div>
 
         {/* título */}
-        <h1 className="text-5xl my-2.5">
+        <h1 className="banner-title animate-slide-in-right delay-300">
           Vista Jd. Guedala
         </h1>
 
-        <h3 className="text-sky-400">
+        <h3 className="banner-subtitle animate-slide-in-left delay-500">
           Mais que um endereço. Um novo estilo de vida.
         </h3>
 
-        <p className="max-w-[500px]">
+        <p className="banner-description animate-fade-in-up delay-500">
           Viva a poucos passos do metrô em um projeto que une design moderno,
           lazer completo e conveniência.
         </p>
 
         {/* botões */}
-        <div className="mt-5">
-          <button className="bg-red-500 border-none px-5 py-3 text-white rounded-full mr-2.5 hover:bg-red-600 transition-colors">
+        <div className="mt-5 animate-fade-in-up delay-500">
+          <button className="btn-primary mr-2.5 hover-glow">
             Agendar Visita
           </button>
-          <button className="bg-transparent border-2 border-white px-5 py-3 text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors">
+          <button className="btn-secondary hover-glow">
             Saiba Mais
           </button>
         </div>
