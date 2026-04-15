@@ -3,25 +3,58 @@ import Banner from "@/app/Components/Banner";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ padding: 20 }}>
       <Header />
       <Banner />
 
       <div
         style={{
           display: "flex",
-          gap: "10px",
-          padding: "20px"
+          gap: 10,
+          padding: 20,
+          flexWrap: "wrap",
         }}
       >
-        <button style={{ background: "red", color: "white" }}>
+        <button
+          style={{
+            backgroundColor: "red",
+            color: "white",
+            border: "none",
+            padding: "10px 18px",
+            borderRadius: 6,
+            cursor: "pointer",
+          }}
+        >
           Residencial
         </button>
-        <button>Studios</button>
-        <button>Apartamentos</button>
-        <button>Fachada</button>
+        <button
+          style={{
+            padding: "10px 18px",
+            borderRadius: 6,
+            cursor: "pointer",
+          }}
+        >
+          Estúdios
+        </button>
+        <button
+          style={{
+            padding: "10px 18px",
+            borderRadius: 6,
+            cursor: "pointer",
+          }}
+        >
+          Apartamentos
+        </button>
+        <button
+          style={{
+            padding: "10px 18px",
+            borderRadius: 6,
+            cursor: "pointer",
+          }}
+        >
+          Fachada
+        </button>
       </div>
-
     </main>
   );
 }
