@@ -3,55 +3,21 @@ import Banner from "@/app/Components/Banner";
 
 export default function Home() {
   return (
-    <main style={{ padding: 20 }}>
+    <main className="p-5">
       <Header />
       <Banner />
 
-      <div
-        style={{
-          display: "flex",
-          gap: 10,
-          padding: 20,
-          flexWrap: "wrap",
-        }}
-      >
-        <button
-          style={{
-            backgroundColor: "red",
-            color: "white",
-            border: "none",
-            padding: "10px 18px",
-            borderRadius: 6,
-            cursor: "pointer",
-          }}
-        >
+      <div className="flex gap-2.5 p-5 flex-wrap">
+        <button className="bg-red-500 text-white border-none px-4.5 py-2.5 rounded-md cursor-pointer hover:bg-red-600 transition-colors">
           Residencial
         </button>
-        <button
-          style={{
-            padding: "10px 18px",
-            borderRadius: 6,
-            cursor: "pointer",
-          }}
-        >
+        <button className="px-4.5 py-2.5 rounded-md cursor-pointer border border-gray-300 hover:bg-gray-50 transition-colors">
           Estúdios
         </button>
-        <button
-          style={{
-            padding: "10px 18px",
-            borderRadius: 6,
-            cursor: "pointer",
-          }}
-        >
+        <button className="px-4.5 py-2.5 rounded-md cursor-pointer border border-gray-300 hover:bg-gray-50 transition-colors">
           Apartamentos
         </button>
-        <button
-          style={{
-            padding: "10px 18px",
-            borderRadius: 6,
-            cursor: "pointer",
-          }}
-        >
+        <button className="px-4.5 py-2.5 rounded-md cursor-pointer border border-gray-300 hover:bg-gray-50 transition-colors">
           Fachada
         </button>
       </div>

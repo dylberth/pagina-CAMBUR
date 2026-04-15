@@ -1,73 +1,37 @@
 export default function Banner() {
   return (
-    <section style={{
-      height: "80vh",
-      backgroundImage: "url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      display: "flex",
-      alignItems: "center",
-      color: "#fff"
-    }}>
-      <div style={{
-        background: "rgba(0,0,0,0.6)",
-        padding: "40px",
-        width: "100%"
-      }}>
+    <section className="h-[80vh] bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6')] flex items-center text-white">
+      <div className="bg-black bg-opacity-60 p-10 w-full">
         {/* badges */}
-        <div style={{ marginBottom: "20px" }}>
-          <span style={{
-            background: "#1e3a8a",
-            padding: "8px 12px",
-            borderRadius: "20px",
-            marginRight: "10px"
-          }}>
+        <div className="mb-5">
+          <span className="bg-blue-800 px-3 py-2 rounded-full mr-2.5">
             Jardim Guedala, São Paulo
           </span>
-
-          <span style={{
-            background: "#1e3a8a",
-            padding: "8px 12px",
-            borderRadius: "20px"
-          }}>
+          <span className="bg-blue-800 px-3 py-2 rounded-full">
             Estação Morumbi a 7 min
           </span>
         </div>
 
         {/* título */}
-        <h1 style={{ fontSize: "48px", margin: "10px 0" }}>
+        <h1 className="text-5xl my-2.5">
           Vista Jd. Guedala
         </h1>
 
-        <h3 style={{ color: "#38bdf8" }}>
+        <h3 className="text-sky-400">
           Mais que um endereço. Um novo estilo de vida.
         </h3>
 
-        <p style={{ maxWidth: "500px" }}>
+        <p className="max-w-[500px]">
           Viva a poucos passos do metrô em um projeto que une design moderno,
           lazer completo e conveniência.
         </p>
 
         {/* botões */}
-        <div style={{ marginTop: "20px" }}>
-          <button style={{
-            background: "#ef4444",
-            border: "none",
-            padding: "12px 20px",
-            color: "#fff",
-            borderRadius: "20px",
-            marginRight: "10px"
-          }}>
+        <div className="mt-5">
+          <button className="bg-red-500 border-none px-5 py-3 text-white rounded-full mr-2.5 hover:bg-red-600 transition-colors">
             Agendar Visita
           </button>
-
-          <button style={{
-            background: "transparent",
-            border: "2px solid #fff",
-            padding: "12px 20px",
-            color: "#fff",
-            borderRadius: "20px"
-          }}>
+          <button className="bg-transparent border-2 border-white px-5 py-3 text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors">
             Saiba Mais
           </button>
         </div>
